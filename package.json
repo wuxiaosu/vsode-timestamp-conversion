@@ -3,12 +3,18 @@
 	"displayName": "Timestamp Conversion",
 	"description": "",
 	"version": "1.0.0",
+	"publisher": "su",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wuxiaosu/vsode-timestamp-conversion"
+	},
+	"icon": "icon.png",
 	"activationEvents": [
 		"onCommand:timestamp-conversion.conversion"
 	],

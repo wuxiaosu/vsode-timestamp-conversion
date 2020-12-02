@@ -42,12 +42,16 @@ function runConversion(editMaker: IEditMaker) {
 		}
 
 		activeTextEditor.edit((textEditorEdit) => {
+			if (activeTextEditor === undefined) {
+				return false;
+			}
 			activeTextEditor.selections.forEach((selection, index) => {
-
+				if (activeTextEditor === undefined) {
+					return false;
+				}
 				var selectedText = activeTextEditor.document.getText(selection).replace(/\$i/g, String(index + 1));
 
 				if (selectedText === "") {
-					erroralert.saveError("NO_SELECT");
 					return;
 				}
 
@@ -55,7 +59,6 @@ function runConversion(editMaker: IEditMaker) {
 					var evaluatedMath = selectedText.toString();
 					editMaker(textEditorEdit, selection, evaluatedMath);
 				} catch (e) {
-					erroralert.saveError("CALC_ERR", selectedText.toString());
 				}
 			});
 		});
