@@ -1,8 +1,8 @@
 {
 	"name": "timestamp-conversion",
 	"displayName": "Timestamp Conversion",
-	"description": "",
-	"version": "1.0.0",
+	"description": "Convert epoch to human-readable date",
+	"version": "1.0.1",
 	"publisher": "su",
 	"engines": {
 		"vscode": "^1.51.0"
